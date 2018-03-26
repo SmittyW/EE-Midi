@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>EE Midi</title>
+		<link href="style/style.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+    	<div class="absolute center text-align-center menu" style="width: 190px" >
+
+      		<form id="login" class="border-window" autocomplete="off">
+				<input type="text" placeholder="email" class="text" id="email"/>
+				<input type="password" placeholder="password" class="text" id="password"/>
+				<input type="text" placeholder="roomID" class="text" id="roomID"/>
+				<input type="submit" id="login-btn" class="button start primary" value="Connect"/>
+				<p id="msgError"></p>
+			</form>
+
+	      	<div id="tools" class="border-window">
+
+	      		<label for="file">
+					<input type="file" id="file" class="inputfile" />
+					<span class="button grey"><img src="style/icons/disc-icon.png"></span>
+					<span id="filename" class="text">Please select a .mid file</span>
+				</label>
+
+	      		<div id="instruments">
+				    <label>
+						<input type="radio" id="piano" name="instrument" value="0" />
+					  	<img src="style/icons/piano-icon.png">
+					</label>
+
+					<label>
+						<input type="radio" id="guitar" name="instrument" value="1" />
+					  	<img src="style/icons/guitar-icon.png">
+					</label>
+			  	</div>
+			  	
+	      		<input type="button" id="write-btn" class="button primary" value="Write"/>
+				
+				<input type="checkbox" id="clear"/><label for="clear" id="clear-status" style="width: 80%">AUTO CLEAR ON</label>
+
+	      		<p>Channels<br>( Click to disable )</p>
+	      		<div id="channels">
+				  	<input type="checkbox" id="ch1"/><label for="ch1">1</label>
+				    <input type="checkbox" id="ch2"/><label for="ch2">2</label>
+				    <input type="checkbox" id="ch3"/><label for="ch3">3</label>
+				    <input type="checkbox" id="ch4"/><label for="ch4">4</label>
+				    <input type="checkbox" id="ch5"/><label for="ch5">5</label>
+				    <input type="checkbox" id="ch6"/><label for="ch6">6</label>
+				    <input type="checkbox" id="ch7"/><label for="ch7">7</label>
+				    <input type="checkbox" id="ch8"/><label for="ch8">8</label><br>
+				    <input type="checkbox" id="ch9"/><label for="ch9">9</label>
+				    <input type="checkbox" id="ch10"/><label for="ch10">10</label>
+				    <input type="checkbox" id="ch11"/><label for="ch11">11</label>
+				    <input type="checkbox" id="ch12"/><label for="ch12">12</label>
+				    <input type="checkbox" id="ch13"/><label for="ch13">13</label>
+				    <input type="checkbox" id="ch14"/><label for="ch14">14</label>
+				    <input type="checkbox" id="ch15"/><label for="ch15">15</label>
+				    <input type="checkbox" id="ch16"/><label for="ch16">16</label>
+				</div>
+				<p>*Channel 10 is for drums*</p>
+	      	</div>
+
+	      	<div class="footer">
+	      		03 / 2018 <a href="https://github.com/SmittyW/EE-Midi">git</a>
+	  		</div>
+
+	    </div>
+
+	    <script src="js/jquery-3.2.1.js"></script>
+	    <script src="js/midi-parser.js"></script>
+	    <script src="js/PlayerIOClient.development.js"></script>
+		<script src="js/BlockHandler.js"></script>
+		<script src="js/midi-writer.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
