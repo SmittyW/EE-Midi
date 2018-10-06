@@ -93,7 +93,7 @@ function writeCheck(){
 		var clear = !$("#clear").is(":checked");
 	    if (clear) {
 	    	writeOnClear = true;
-	    	connection.send("say", "/clear");
+	    	con.send("say", "/clear");
 	    }
 	    else write();
 	}
@@ -125,7 +125,7 @@ function write()
 
     $("#write-btn").val("Cancel");
 
-	while (!isFinished && connection != null)
+	while (!isFinished && con != null)
 	{
 		var e = nextEvent();
 		if (e == null) break;
